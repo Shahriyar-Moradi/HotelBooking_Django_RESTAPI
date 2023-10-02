@@ -14,12 +14,6 @@ class Room(models.Model):
     room_number = models.IntegerField()
     hotel_name = models.ForeignKey(Hotel, on_delete=models.CASCADE)
 
-    # def __str__(self):
-    #     return str(self.room_number)
-
-    # def __init__(self, room_num):
-    #     self.room_number = room_num
-    #
     def __str__(self):
         # return str(self.room_number)
         return f"Room {self.room_number} in {self.hotel_name}"
